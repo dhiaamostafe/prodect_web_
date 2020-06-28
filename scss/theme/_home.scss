@@ -1,0 +1,55 @@
+
+// header in home 
+.header
+{
+  height: 0;
+}
+
+
+// img img-prodect
+.img-prodect
+{
+ width: 100%;
+ height: 500PX;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ position: relative;
+ z-index: 1;
+
+}
+
+// new home
+.div_section_home
+{ max-width: 100%;
+
+  .top_section
+  { @include font_line;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 3px 0px;
+    font-size: 30px;
+    text-align: $text_align_center;
+    
+  }
+  //navber section home
+    .nav-section
+    { 
+      width: 100%;
+      display: block;
+     position: relative;
+     overflow: hidden;
+  }
+  // end navber section home
+  /* stare image clothes section*/
+  .image_clothes
+  { display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  };
+/* end image clothes section*/
+}
+
