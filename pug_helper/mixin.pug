@@ -56,13 +56,13 @@ mixin table_prod_card
       img(src="img/tt.jpg" alt="")
       div(class="title_card_table_prodect") Red Shirt Pleat        
     td(class="price-col") $
-      span 29
+      span(class="price-col-span") 20
     td(class="quantity-col")
       div(class="pro-qty")
         input(type="text" value="1")     
     td(class="total") $
-      span 29
-    td(class="card-close") x
+      span(class="total-col-span") 29
+    td(class="card-close"): span x
 
 
 // mixin small card 

@@ -97,7 +97,7 @@
     }
     /* hover image */
 &:hover{
-	@include perfixer(box-shadow,0px 9px 38px -13px rgba(0, 0, 0, 0.33),webkit moz o ms);
+	@include perfixer(box-shadow,0px 9px 38px -13px #9a9898,webkit moz o ms);
 
 	.hover-img 
      {

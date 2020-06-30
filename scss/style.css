@@ -74,9 +74,9 @@ a {
     height: 40px;
     border-radius: 10px;
     margin: 0px 37px;
-    background-image: url(../img/op.png);
+    background-image: url(../img/searchicon.png);
     background-repeat: no-repeat;
-    background-position: 10px; }
+    background-position: 115px; }
 
 /* end  search --*/
 /* nav section */
@@ -354,11 +354,11 @@ a {
         -ms-border-radius: 30px;
         border-radius: 30px; }
   .product_image:hover {
-    -webkit-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    -o-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    -ms-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33); }
+    -webkit-box-shadow: 0px 9px 38px -13px #9a9898;
+    -moz-box-shadow: 0px 9px 38px -13px #9a9898;
+    -o-box-shadow: 0px 9px 38px -13px #9a9898;
+    -ms-box-shadow: 0px 9px 38px -13px #9a9898;
+    box-shadow: 0px 9px 38px -13px #9a9898; }
     .product_image:hover .hover-img {
       opacity: 0.9;
       visibility: visible; }
@@ -442,7 +442,7 @@ a {
 .header {
   height: 0; }
 
-.img-prodect {
+.image_animation_home_head .img-prodect {
   width: 100%;
   height: 500PX;
   background-size: cover;
@@ -450,6 +450,41 @@ a {
   background-position: center;
   position: relative;
   z-index: 1; }
+.image_animation_home_head .owl-nav {
+  font-size: 20px;
+  color: #1c1c1c;
+  background: blue;
+  border-radius: 54px; }
+  .image_animation_home_head .owl-nav .owl-prev {
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-35px);
+    -moz-transform: translateY(-35px);
+    -ms-transform: translateY(-35px);
+    -o-transform: translateY(-35px);
+    transform: translateY(-35px); }
+  .image_animation_home_head .owl-nav .owl-next {
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-35px);
+    -moz-transform: translateY(-35px);
+    -ms-transform: translateY(-35px);
+    -o-transform: translateY(-35px);
+    transform: translateY(-35px); }
 
 .div_section_home {
   max-width: 100%;

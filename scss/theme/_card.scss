@@ -84,9 +84,21 @@
 		}
 		/* ----------------------------------------------*/
 		.card-close {
-			color: red;
+			
 			width: 6%;
-			cursor: pointer;
+			
+			span
+			{   color: $color_back_btn;
+				font-size: 24px;
+				&:hover
+				{
+					cursor: pointer;
+					color: red;
+					font-weight: bold;
+					font-size: 30px;
+				}
+				
+			}
 		}
 		/* ----------------------------------------------*/
 		.end_card_table tr th
@@ -95,9 +107,9 @@
 			.price_finlly_card
 			{
 				border: 1px solid #e6e6e6;
-		    border-radius: 22px;
+		       border-radius: 22px;
 				width: 363px;
-		    height: 50px;
+		      height: 50px;
 				display: block;
 				text-align: center;
 			}

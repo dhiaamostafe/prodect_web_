@@ -74,9 +74,9 @@ a {
     height: 40px;
     border-radius: 10px;
     margin: 0px 37px;
-    background-image: url(../img/op.png);
+    background-image: url(../img/searchicon.png);
     background-repeat: no-repeat;
-    background-position: 10px; }
+    background-position: 115px; }
 
 /* end  search --*/
 /* nav section */
@@ -404,11 +404,11 @@ button {
         -ms-border-radius: 30px;
         border-radius: 30px; }
   .product_image:hover {
-    -webkit-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    -o-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    -ms-box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33);
-    box-shadow: 0px 9px 38px -13px rgba(0, 0, 0, 0.33); }
+    -webkit-box-shadow: 0px 9px 38px -13px #9a9898;
+    -moz-box-shadow: 0px 9px 38px -13px #9a9898;
+    -o-box-shadow: 0px 9px 38px -13px #9a9898;
+    -ms-box-shadow: 0px 9px 38px -13px #9a9898;
+    box-shadow: 0px 9px 38px -13px #9a9898; }
     .product_image:hover .hover-img {
       opacity: 0.9;
       visibility: visible; }
@@ -554,9 +554,15 @@ table.cart-table {
         font-weight: 700;
         padding: 16px 0; }
   table.cart-table .card-close {
-    color: red;
-    width: 6%;
-    cursor: pointer; }
+    width: 6%; }
+    table.cart-table .card-close span {
+      color: #00043c;
+      font-size: 24px; }
+      table.cart-table .card-close span:hover {
+        cursor: pointer;
+        color: red;
+        font-weight: bold;
+        font-size: 30px; }
   table.cart-table .end_card_table tr th {
     padding: 20px; }
     table.cart-table .end_card_table tr th .price_finlly_card {
