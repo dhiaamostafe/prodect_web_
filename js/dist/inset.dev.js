@@ -19,8 +19,9 @@
   }); // function add class active linker header
 
   var nav_offset_top = $('header').height() + 50;
-  $('.navber li ').click(function () {
-    $(this).addClass('active').siblings().removeClass('active');
+  $('.navber li a').on('click', function () {
+    $('.navber a').removeClass('active');
+    $(this).addClass('active');
   }); // function sider header
 
   $(function () {
@@ -52,7 +53,7 @@
   //---------------- start  card ------------------------------------------
   // caculer prodect total
 
-  var proQty = $('.pro-qty');
+  var proQty = $('.input_card_number');
   proQty.prepend('<span class="dec qtybtn">-</span>');
   proQty.append('<span class="inc qtybtn">+</span>');
   proQty.on('click', '.qtybtn', function () {
@@ -72,11 +73,27 @@
     }
 
     total = total * newVal;
-    $('.total-col-span').html(total);
+    $button.parent().parent().next().children().html(total);
     $button.parent().find('input').val(newVal);
   }); // remove prodect to cheese 
 
   $('.card-close span').on('click', function () {
     $(this).parent().parent().remove();
+  }); // function cacute item prices\
+
+  var sum = 0;
+  $('.total-col-span').each(function () {
+    sum += parseInt($(this).text());
   });
+  $('.price_finlly_card').val(sum); //---------------- end  card ------------------------------------------
+  //---------------- start  prodect detial --------------------------------
+  // loop of height row-detail 
+
+  var maxlenght = 0;
+  $('.row-detail').each(function () {
+    if ($(this).height() > maxlenght) {
+      maxlenght = $(this).height();
+    }
+  });
+  $('.row-detail').height(maxlenght);
 })(jQuery);

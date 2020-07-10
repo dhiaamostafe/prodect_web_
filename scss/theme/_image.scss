@@ -45,28 +45,40 @@
 		background: white;
 		position: relative;
 		width: 100%;
-		text-align: center !important;
 		padding-bottom: 0.5rem !important;
 		//-------------------------------------------------------
 		h3{
 			@include font_line;
 			padding: 10px;
+
 			text-transform: uppercase;
 			a{
 				color: black;
 				text-decoration: none;
+				float: $floot_left;
+			}
+		    .fa-icon 
+		    {
+			 float: $floot_right;
+			 font-size: 24px;
+			 color: black;
+			}
+			a.active 
+			{
+				color: red;
 			}
         }
         //-------------------------------------------------------
         .pricing{
 			width: 100%;
-		
+		    text-align: center;
 			margin-bottom: 0;
 			font-weight: 400;
+			font-size: 20px;
 			.price-dc{
 				text-decoration: line-through;
 				color: lighten(black,70%);
-				margin-right: 0.5rem !important;
+				margin-right: 1.5rem !important;
 			}
 			.price-sale{
 				color: #82ae46;
@@ -74,44 +86,19 @@
 		
         }
         //---------------------------------------------------------------
-        .bottom-area_icon{
-			position: absolute;
-			bottom: 15px;
-			left: 0;
-			right: 0;
-			opacity: 0;
-			background-color: aqua;
-			@include transition(all 0.3s ease);
-	        padding-right: 1rem !important;
-	        padding-left: 1rem !important;
-			a{
-				color: white;
-				width: 100%;
-				background: #82ae46;
-				margin: 0 auto;
-				@include border-radius(30px);
-
-            }
-
-        }
+        
     }
     /* hover image */
 &:hover{
-	@include perfixer(box-shadow,0px 9px 38px -13px #9a9898,webkit moz o ms);
+	@include perfixer(box-shadow,10px 20px 38px -13px #232323,webkit moz o ms);
 
 	.hover-img 
      {
 		opacity: 0.9;
 		visibility: visible;
 	 }
+	
 
-	.pricing{
-		opacity: 0;
-	}
-	.text{
-		.bottom-area{
-			opacity: 1;
-		}
-	}
+
   }
 }

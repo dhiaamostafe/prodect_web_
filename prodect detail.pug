@@ -1,0 +1,89 @@
+include pug_helper/mixin.pug
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Document
+    include pug_helper/link_prodect_datial.pug
+  body
+    include pug_helper/header.pug
+    div(class="Product-Details")
+     div(class="contenr")
+
+      div(class="row-detail")
+        div(class="image-detail")
+          img(src="img/twemen.png")
+          i(class="fa fa-chevron-left fa-lg")
+          i(class="fa fa-chevron-right fa-lg")
+        div(class="slick-dot-image")
+          
+            img(src="img/twemen.png" class="selected")
+            
+          
+            img(src="img/22.png")
+            
+          
+            img(src="img/tt.jpg")
+
+        
+         
+            
+            
+
+
+      div(class="row-detail")
+        div(class="text-detail")
+          h2 Men's Essential Tee
+          p Black
+          P(class="price-detail") $30
+            span $20
+          p(class="star-detail")
+            i(class="ti-star")
+            i(class="ti-star")
+            i(class="ti-star")
+            i(class="ti-star")
+            i(class="ti-star")
+        div(class="size-color-delail")
+          p Black
+          p(class="color-detl")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+          div(class="clearflex")
+          p(class="size-detl")
+            a(href="#") m
+            a(href="#") ml
+            a(href="#")  mll
+            a(href="#")  xxl
+            a(href="#") xl
+          div(class="number-dot input_card_number")
+            input(type="text" value="1")
+          button  Add to car
+           - var num_immage=['tt' , 'tt' , 'tt', 'tt']
+    
+    div(class="detail-animtion")
+      div(class="contenr")
+        div(class="owl-carousel  owl-theme image_anim_home_cloths")
+          +animatin_img(num_immage)
+	     
+				
+		  
+		   
+        
+
+		   
+				
+	  
+                  
+
+
+
+
+    // footer the page prodect detail 
+    +small_card
+    include pug_helper/footer.pug
+    include pug_helper/link_javascript.pug

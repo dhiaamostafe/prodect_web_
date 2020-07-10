@@ -1,21 +1,18 @@
-mixin product_images(name_image,menu_image)
+mixin product_images(name_image,menu_image,number)
   div(class="product_image mix "+menu_image)
-    a(href="#" class="img-product")
-      img(class="img-fluid" src="img/"+name_image  alt="Colorlib Template")
+    a(href="prodect detail.html" class="img-product")
+      img(class="img-fluid" src="img/png/"+number+".png"  alt="Colorlib Template")
       div(class="overlay")
-      img(class="hover-img" src="img/man.jpg" alt="Colorlib Template")
+      img(class="hover-img" src="img/png/"+name_image alt="Colorlib Template")
     div(class="text_image")
-      h3: a(href="#") Bell Pepper
+      h3
+        a(href="#") Men's Essential Tee
+        a(href="#" class="fa-icon fa fa-heart ")
+        div(class="clearflex")
       div(class="pricing")
          span(class="price-dc") $120.00
          span(class="price-sale") $80.00
-      div(class="bottom-area_icon")
-          a(href="#" class="d-flex")
-            i(class="ion-ios-menu")
-          a(href="#" class=" d-flex ")
-            i(class="ion-ios-cart")
-          a(href="#" class="d-flex ")
-            i(class="ion-ios-heart")
+      
 
 // mixin button small silder menu          
 mixin btn_small_menu
@@ -34,12 +31,12 @@ mixin nav_not_don(elment)
         
         
       
-
+- var num_img=['1e.png' , '2e.png' , '3e.png', '4e.png']
 //  image animatin
 mixin animatin_img(name_img)
- each val_image in name_img
+ each val_image,index in num_img
     div(class="item")
-      +product_images(val_image+".jpg")
+      +product_images(val_image,"" ,index+1)
 
 
 
@@ -58,7 +55,7 @@ mixin table_prod_card
     td(class="price-col") $
       span(class="price-col-span") 20
     td(class="quantity-col")
-      div(class="pro-qty")
+      div(class="pro-qty input_card_number")
         input(type="text" value="1")     
     td(class="total") $
       span(class="total-col-span") 29
@@ -77,22 +74,26 @@ mixin small_card
               img(src="img/tt.jpg" alt="")
               div(class="sml-title")
                 div(class="sml-title_card") Red Shirt Pleat
-                div(class="sml-title_card") $30
+                div(class="sml-title_card") $
+                  span 30
           li
               img(src="img/tt.jpg" alt="")
               div(class="sml-title")
                 div(class="sml-title_card") Red Shirt Pleat
-                div(class="sml-title_card") $30
+                div(class="sml-title_card") $
+                  span 30
           li
               img(src="img/tt.jpg" alt="")
               div(class="sml-title")
                 div(class="sml-title_card") Red Shirt Pleat
-                div(class="sml-title_card") $30
+                div(class="sml-title_card") $
+                  span 30
           li
               img(src="img/tt.jpg" alt="")
               div(class="sml-title")
                 div(class="sml-title_card") Red Shirt Pleat
-                div(class="sml-title_card") $30
+                div(class="sml-title_card") $
+                 span 30
         div(class="small-total") Total: $
           span 75.00
         div(class="btn_ch-card") 

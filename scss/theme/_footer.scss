@@ -4,7 +4,7 @@ footer
   display: inline-block;
   color: $color_footer;
   background-color: $color_back_footer;
-  margin-top: 20px;
+  
 
   .row1
   {
@@ -20,6 +20,17 @@ footer
        width: 1px;
        height: 80%;
        background-color: $color_footer;
+       @include wide-mobile
+       {
+         
+         width: 0;
+       };
+       @include cmq
+       {
+         
+         width: 0;
+       };
+
 
       }
     }
@@ -37,12 +48,17 @@ footer
     {
       max-width: (99% / 1);
       padding-left: 20px;
+      text-align: center;
+      border-bottom: 1px solid;
+ 
       
     };
     @include cmq
     {
       max-width: (99% / 1);
       padding-left: 50px;
+      text-align: center;
+      border-bottom: 1px solid;
 
     };
     
@@ -59,32 +75,40 @@ footer
     {
       padding: 44px 0px;
       position: relative;
+      font-size: 26px;
       &::after
       {
         content: ' ';
-        width: 262px;
+        width: 285px;
         height: 4px;
         background-color: white;
         position: absolute;
         top: 72px;
         left: 0;
+        @include wide-mobile
+        {
+         contain: none;
+         position: relative;
+      
+        };
+        @include cmq
+       {
+        contain: none;
+        position: relative;
+
+       };
       }
     }
+
+
+
+
    .navber li
    {  
       color: $color_footer;
       font-size: 35px;
-       @include wide-mobile
-       {
-         float: left;
-         padding: 5px 10px;
-       };
-       @include cmq
-       {
-       float: left;
-       padding: 5px 10px;
-       };
-    
+      display: inline-block;
+      text-align: center;
     a
     { 
       color: $color_footer;
@@ -108,22 +132,35 @@ footer
       padding-bottom: 20px;
       position: relative;
       width: 100%;
+      font-size: 28px;
       &::after
       {
       content: ' ';
-      width: 111px;
+      width: 130px;
       height: 4px;
       background-color: $color_footer;
       position: absolute;
       top: 33px;
       left: 0;
+      @include wide-mobile
+        {
+         contain: none;
+         position: relative;
+      
+        };
+        @include cmq
+       {
+        contain: none;
+        position: relative;
+
+       };
       
       
       }
     }
     p,i
     { 
-      font-size: 28px;
+      font-size: 24px;
       line-height: 68px;
       padding-left: 5px;
       cursor: pointer;

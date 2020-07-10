@@ -30,7 +30,8 @@ a
   };
   @include cmq
   {
-    width: 100%;
+	width: 100%;
+	font-size: 12px !important;
   };
 
 }
@@ -45,7 +46,6 @@ a
 flex: 32.33333333333333%;
 position: relative;
 width: 100%;
-height:300px ;
 float: $floot_left;
 }
 /* end row image discription */
@@ -66,7 +66,8 @@ float: $floot_left;
     margin: 0px 37px;
     background-image: url(../img/searchicon.png);
     background-repeat: no-repeat;
-	background-position: 115px;
+	background-position: 15px;
+	background-size: 20px;
   }
 }
 /* end  search --*/

@@ -29,7 +29,7 @@
 	{
 		float: $floot_left;
 		
-		@include medium
+	@include medium
     {
 		float: $floot_left;
     };
@@ -60,6 +60,10 @@
 		 padding: 14px 10px;
 		 text-decoration: none;
 		}
+		.active,.link_nav:hover
+        {
+        color: blue;
+         }
 		div
 		{
 			display: none;
@@ -109,6 +113,7 @@
 		margin-right: 20px;
 		position: relative;
 		cursor: pointer;
+		text-transform: capitalize;
 		@include wide-mobile
 		{
 		  
@@ -128,8 +133,4 @@
 		text-decoration: underline;
 	  }
 	}
-}
-.active
-{
-	color: darkorange;
 }

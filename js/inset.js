@@ -17,8 +17,11 @@
     })
     // function add class active linker header
     var nav_offset_top = $('header').height() + 50;
-    $('.navber li ').click(function() {
-      $(this).addClass('active').siblings().removeClass('active');
+
+    $('.navber li a').on('click', function () {
+        $('.navber a').removeClass('active');
+        $(this).addClass('active');
+
     });
 
     // function sider header
@@ -55,7 +58,7 @@
      //---------------- end section ------------------------------------------
      //---------------- start  card ------------------------------------------
       // caculer prodect total
-      var proQty = $('.pro-qty');
+      var proQty = $('.input_card_number');
       proQty.prepend('<span class="dec qtybtn">-</span>');
       proQty.append('<span class="inc qtybtn">+</span>'); 
       proQty.on('click', '.qtybtn', function () {
@@ -73,7 +76,7 @@
               }
           }
           total=total*newVal;
-          $('.total-col-span').html(total);
+          $button.parent().parent().next().children().html(total);
           $button.parent().find('input').val(newVal);
       });
 
@@ -83,6 +86,77 @@
       $('.card-close span').on('click',function(){
        $(this).parent().parent().remove();
     });
+
+    // function cacute item prices\
+   
+
+    var sum=0;
+   
+        $('.total-col-span').each(function () {
+            sum+=parseInt($(this).text());    
+       
+          });
+          $('.price_finlly_card').text(sum);
+    //---------------- end  card ------------------------------------------
+    //---------------- start  prodect detial --------------------------------
+    // loop of height row-detail 
+    
+    function henghtdiv(elmentheight)
+    {  var maxlenght =0;
+        $(elmentheight).each(function(){
+         if( $(this).height()> maxlenght)
+         {maxlenght= $(this).height();}
+         
+        });
+        $(elmentheight).height(maxlenght);
+
+    };
+    henghtdiv('.row-detail');
+    //------------------------------------------------------------------    
+     // in page product  dateial page move between image 
+     $('.slick-dot-image  img').on('click',function(){
+        $('.slick-dot-image img').removeClass('selected');
+        $(this).addClass('selected');
+
+        $('.image-detail img').attr('src',$(this).attr('src'));
+
+    });
+
+    $('.image-detail .fa-chevron-left').on('click',function(){
+       if($('.slick-dot-image .selected').is(':last-child')){
+       
+          $('.slick-dot-image  img').eq(0).click();
+        
+       }
+       else
+       {
+          $('.slick-dot-image  .selected').next().click();
+       }
+    
+   });
+
+
+   $('.image-detail .fa-chevron-right').on('click',function(){
+       if($('.slick-dot-image .selected').is(':first-child')){
+
+          $('.slick-dot-image  img:last').click();
+        
+       }
+       else
+       {
+          $('.slick-dot-image  .selected').prev().click();
+       }
+    
+   });
+
+
+    //--------------------------end prodect datial
+
+   
+
+
+
+
 })(jQuery)
 
 

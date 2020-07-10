@@ -26,17 +26,31 @@ html
           tbody(class="end_card_table")
             tr
               th
-                input(type="text" name="coupon" placeholder="Coupon Code" class="price_finlly_card")
+                input(type="text" name="coupon" placeholder="Coupon Code" class="input-coupon-code")
               th
               th: button(type="button") Apply coupon
               th(colspan="2"): button(type="button") Update Cart
+            
+            tr(class="finall-table-total")
+              th Subtotal
+              th Delivery
+              th Discount
+              th Total 
+              th
+            tr
+              th(class="price_finlly_card")
+              th 0.0
+              th $4.0
+              th $20.5
+              th
+            
                 
 
 
 
 
     //-----------------------------------------------------------
-    
+  
     //----------------------------------------------------
     +small_card
     include pug_helper/footer.pug
